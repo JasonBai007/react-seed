@@ -15,7 +15,7 @@ export default class Sidebar extends React.Component {
         return (
             <div id="leftMenu"> 
                 <img src={require('../images/logo.png')} width="50" id="logo"/> 
-                <Link to="/home" activeClassName="active"><Icon type="home" /><span>欢迎页</span></Link>
+                <Link to="/home" activeClassName="active"><Icon type="home" /><span>首页</span></Link>
                 <Link to="/last" activeClassName="active"><Icon type="mail" /><span>结尾页</span></Link>
                 <Link to="/404" activeClassName="active"><Icon type="mail" /><span>404页</span></Link>                    
                 <div id="copyright">Copyright © 白延云</div>                    

@@ -12,7 +12,6 @@
     "antd": "^1.0.1",
     "babel-runtime": "^6.11.6",
     "console-polyfill": "^0.2.2",
-    "history": "^2.1.1",
     "jquery": "^3.1.1",
     "moment": "^2.15.1",
     "react": "^15.3.2",
