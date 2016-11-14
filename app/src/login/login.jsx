@@ -1,11 +1,10 @@
 import React from 'react';
 import { Form, Input, Button, notification} from 'antd';
-import createHistory from 'history/lib/createHashHistory';
+import { browserHistory } from 'react-router'
 
 import './login.less'
 
 const FormItem = Form.Item;
-const history = createHistory();
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -18,7 +17,7 @@ class LoginPage extends React.Component {
         let p = this.props.form.getFieldsValue().password;
         if (n === 'ilovejasonbai' && p === 'ilovejasonbai') {
             // 表单的路由处理                       
-            history.push('/home');
+            browserHistory.push('/home');
         } else {
             this.openNotificationWithIcon('info');
         }

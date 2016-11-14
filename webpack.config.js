@@ -42,6 +42,6 @@ module.exports = {
         new ExtractTextPlugin("css/bundle.css"),
         new webpack.ProvidePlugin({ $: "jquery" }),
         new webpack.HotModuleReplacementPlugin(),
-        new OpenBrowserPlugin({ url: 'http://localhost:8080/login' })
+        new OpenBrowserPlugin({ url: 'http://localhost:8080/' })
     ]
 };

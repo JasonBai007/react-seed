@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, Redirect } from 'react-router';
-import createHistory from 'history/lib/createHashHistory';
-const history = createHistory();
+import { Router, Route, IndexRoute, Redirect, browserHistory } from 'react-router';
 
 // 引入单个页面（包括嵌套的子页面）
 import Login from './login/login.jsx';
@@ -13,7 +11,7 @@ import NotFoundPage from './nofind/nofind.jsx';
 
 // 配置路由，并将路由注入到id为init的DOM元素中
 ReactDOM.render(
-    <Router history={history} >        
+    <Router history={browserHistory} >        
         <Route path="/" component={Init} >
             <IndexRoute component = {Login} />
             <Route path="home" component={Welcome}/>
