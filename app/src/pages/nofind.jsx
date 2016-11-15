@@ -1,5 +1,4 @@
-import React from 'react';
-import Sidebar from '../components/Sidebar.jsx'
+import React from 'react'
 
 export default class NotFoundPage extends React.Component {
     constructor(props) {
@@ -19,11 +18,8 @@ export default class NotFoundPage extends React.Component {
         }
         return (            
             <div>
-                <Sidebar />
-                <div id="rightWrap">
-                    <p style={styleP} >OOPS! - Could not Find it</p>
-                    <h1 style={styleH} >404</h1>
-                </div>
+                <p style={styleP} >OOPS! - Could not Find it</p>
+                <h1 style={styleH} >404</h1>
             </div>
         );
     }

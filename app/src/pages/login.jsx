@@ -1,8 +1,8 @@
-import React from 'react';
-import { Form, Input, Button, notification} from 'antd';
+import React from 'react'
+import { Form, Input, Button, notification} from 'antd'
 import { browserHistory } from 'react-router'
 
-import './login.less'
+import '../less/login.less'
 
 const FormItem = Form.Item;
 
@@ -17,7 +17,7 @@ class LoginPage extends React.Component {
         let p = this.props.form.getFieldsValue().password;
         if (n === 'ilovejasonbai' && p === 'ilovejasonbai') {
             // 表单的路由处理                       
-            browserHistory.push('/home');
+            browserHistory.push('/');
         } else {
             this.openNotificationWithIcon('info');
         }

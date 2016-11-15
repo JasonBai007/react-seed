@@ -1,8 +1,7 @@
 import React from 'react';
-import createHistory from 'history/lib/createHashHistory';
+import { browserHistory } from 'react-router'
 import {Select} from 'antd';
 const Option = Select.Option;
-const history = createHistory();
 
 export default class Logout extends React.Component {
     constructor(props) {
@@ -11,7 +10,7 @@ export default class Logout extends React.Component {
 
     handleChange = (v) => {
         if(v === '退出') {
-            history.push('/login');
+            browserHistory.push('login');
         }
     }
     render() {
