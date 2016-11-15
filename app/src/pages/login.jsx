@@ -17,7 +17,7 @@ class LoginPage extends React.Component {
         let p = this.props.form.getFieldsValue().password;
         if (n === 'ilovejasonbai' && p === 'ilovejasonbai') {
             // 表单的路由处理    
-            document.cookie = "nowKey=" + "1";                   
+            document.cookie = "nowKey=" + "home";                   
             browserHistory.push('/');
         } else {
             this.openNotificationWithIcon('info');

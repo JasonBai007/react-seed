@@ -13,7 +13,8 @@ export default class Title extends React.Component {
             marginTop: 20,
             marginBottom: 10,
             letterSpacing:4,
-            borderRadius:5,
+            borderRadius:3,
+            boxShadow:'1px 1px 1px #999',
             overflow:'hidden',
         };        
         return (

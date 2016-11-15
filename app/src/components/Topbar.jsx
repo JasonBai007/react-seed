@@ -1,18 +1,25 @@
 import React from 'react';
-import { browserHistory } from 'react-router'
-import {Select} from 'antd';
-const Option = Select.Option;
+import { Menu, Dropdown, Icon } from 'antd';
+
+const menu = (
+  <Menu>
+    <Menu.Item>
+      <a href="/user">用户中心</a>
+    </Menu.Item>
+    <Menu.Item>
+      <a href="/setting">修改密码</a>
+    </Menu.Item>
+    <Menu.Item>
+      <a href="/login">退出</a>
+    </Menu.Item>
+  </Menu>
+);
 
 export default class Logout extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    handleChange = (v) => {
-        if(v === '退出') {
-            browserHistory.push('login');
-        }
-    }
+    
     render() {
         let logoutWrap = {
             textAlign: 'right',
@@ -22,10 +29,11 @@ export default class Logout extends React.Component {
         }
         return (
             <div style={logoutWrap}>
-                <Select defaultValue="超级管理员" size="large" onChange={this.handleChange}>
-                    <Option value="超级管理员">超级管理员</Option>
-                    <Option value="退出">退出</Option>
-                </Select>
+                <Dropdown overlay={menu}>
+                    <a className="ant-dropdown-link">
+                        Hi Jason &nbsp;&nbsp;<Icon type="down" />
+                    </a>
+                </Dropdown>
             </div>
         );
     }
