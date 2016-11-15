@@ -16,7 +16,8 @@ class LoginPage extends React.Component {
         let n = this.props.form.getFieldsValue().username;
         let p = this.props.form.getFieldsValue().password;
         if (n === 'ilovejasonbai' && p === 'ilovejasonbai') {
-            // 表单的路由处理                       
+            // 表单的路由处理    
+            document.cookie = "nowKey=" + "1";                   
             browserHistory.push('/');
         } else {
             this.openNotificationWithIcon('info');
@@ -26,10 +27,10 @@ class LoginPage extends React.Component {
     // 返回一个弹框对象，提示用户名和密码
     openNotificationWithIcon = (type) => {
         return notification[type]({
-                 message: '用户名&密码',
-                 description: '都是：ilovejasonbai',
-                 duration: 6
-               })
+            message: '用户名&密码',
+            description: '都是：ilovejasonbai',
+            duration: 6
+        })
     }
 
     componentDidMount() {
@@ -40,7 +41,7 @@ class LoginPage extends React.Component {
         const { getFieldProps } = this.props.form;      
         return (
             <div id="loginpagewrap">
-                <p>Sign in to PDB</p>
+                <p>Sign in to BYY</p>
                 <div id="loginWrap">                
                     <Form horizontal onSubmit={this.handleSubmit}>
                         <FormItem>

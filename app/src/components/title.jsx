@@ -10,6 +10,7 @@ export default class Title extends React.Component {
         const titleStyle = {
             padding:'5px 20px',
             background:'#ECECEC',
+            marginTop: 20,
             marginBottom: 10,
             letterSpacing:4,
             borderRadius:5,

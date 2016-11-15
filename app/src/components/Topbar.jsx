@@ -18,7 +18,7 @@ export default class Logout extends React.Component {
             textAlign: 'right',
             paddingRight: 25,
             borderBottom: '1px solid #ddd',
-            paddingBottom: 20
+            paddingBottom: 15
         }
         return (
             <div style={logoutWrap}>
