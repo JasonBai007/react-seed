@@ -23,6 +23,8 @@ export default class Sidebar extends React.Component {
             browserHistory.push('/');
         }else if(e.key == 'chart'){
             browserHistory.push('chart');
+        }else if(e.key == 'report'){
+            browserHistory.push('report');
         }else if(e.key == 'user'){
             browserHistory.push('user');
         }else if(e.key == 'setting'){
@@ -46,8 +48,9 @@ export default class Sidebar extends React.Component {
                     style={{ width: 146 }}                    
                 >
                     <Menu.Item key="home"><Icon type="home" />首页</Menu.Item> 
-                    <SubMenu key="sub1" title={<span><Icon type="bar-chart" /><span>数据报告</span></span>}>
-                        <Menu.Item key="chart">广告报告</Menu.Item>
+                    <SubMenu key="sub1" title={<span><Icon type="bar-chart" /><span>导航一</span></span>}>
+                        <Menu.Item key="chart">子导航一</Menu.Item>
+                        <Menu.Item key="report">子导航二</Menu.Item>
                     </SubMenu>
                     <Menu.Item key="user"><Icon type="user" />用户中心</Menu.Item>
                     <Menu.Item key="setting"><Icon type="setting" />设置</Menu.Item>                    

@@ -2,7 +2,7 @@ import React from 'react'
 import Topbar from '../components/Topbar'
 import Title from '../components/Title'
 
-export default class Chart extends React.Component {
+export default class Report extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ export default class Chart extends React.Component {
         return (
             <div>
                 <Topbar />
-                <Title name="子导航一" />
+                <Title name="子导航二" />
             </div>
         )
     }       
