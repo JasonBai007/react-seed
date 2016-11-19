@@ -11,6 +11,7 @@
 - Mock
 - Babel
 - Webpack
+- ReCharts
 
 ## How to use
 
