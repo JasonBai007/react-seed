@@ -1,5 +1,6 @@
 {
     "presets": [ "es2015", "stage-0", "react"],
+    //antd插件，可以做到组件的按需调用
     "plugins": [["import", {
         "libraryName": "antd",
         "style": true

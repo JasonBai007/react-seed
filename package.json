@@ -1,6 +1,6 @@
 {
   "name": "reactseed",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "a seed for a project using react antd and webpack",
   "main": "app/src/main.jsx",
   "scripts": {
@@ -33,6 +33,7 @@
     "file-loader": "",
     "less": "",
     "less-loader": "",
+    "mockjs": "^1.0.1-beta3",
     "open-browser-webpack-plugin": "",
     "style-loader": "",
     "url-loader": "",

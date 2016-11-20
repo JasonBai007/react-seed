@@ -11,7 +11,7 @@ module.exports = {
         hot: true,
         inline: true,
         progress: true,
-        contentBase: "./app", //最好写上，否则报错，难道这里是一个坑？
+        contentBase: "./app", 
         port: 8080
     },
 
@@ -21,9 +21,8 @@ module.exports = {
         vendors:['react','react-dom','react-router','Recharts']  //第三方库和框架
     },
     output: {
-        // path: 'dist',  //不写居然也没事，由于有服务器，生成不了静态文件，这也是一个坑
         publicPath: 'dist',
-        filename: 'js/bundle.js',
+        filename: 'js/bundle.js'
     },
     module: {
         loaders: [
@@ -35,7 +34,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx'],
+        extensions: ['', '.js', '.jsx']
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin('vendors','js/vendors.js'),

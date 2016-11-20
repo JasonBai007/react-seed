@@ -1,10 +1,10 @@
-/**
-*** Mock data
-*** http://mockjs.com/examples.html
-*** https://segmentfault.com/a/1190000003087224
-*/
-Mock.mock(/getData/, {
-    'name'     : '@name',
-    'age|1-100': 100,
-    'color'    : '@color'
-});
+import Mock from 'mockjs';
+
+// 模拟折线图数据
+let lineData = Mock.mock({
+	'line|5-10': [
+		{'name':'@first','uv|1000-4000':2000,'pv|1000-4000':2000,'amt|1000-4000':2000}
+	]
+})
+
+export { lineData }
