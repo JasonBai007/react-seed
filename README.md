@@ -32,3 +32,4 @@
 > [lodash.js](http://lodashjs.com/)  
 > [ECharts](http://echarts.baidu.com/)  
 > [Recharts](http://recharts.org/)  
+> [ES6 BOOK](http://es6.ruanyifeng.com/)  
