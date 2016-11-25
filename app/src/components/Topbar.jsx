@@ -10,7 +10,7 @@ const menu = (
       <a href="/setting">修改密码</a>
     </Menu.Item>
     <Menu.Item>
-      <a href="/login">退出</a>
+      <a href="/login">退出登陆</a>
     </Menu.Item>
   </Menu>
 );
