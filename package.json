@@ -1,6 +1,6 @@
 {
   "name": "reactseed",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "a seed for a project using react antd and webpack",
   "main": "app/src/main.jsx",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "animate.css": "^3.5.1",
-    "antd": "2.4.3",
+    "antd": "^2.6.1",
     "babel-runtime": "^6.11.6",
     "console-polyfill": "^0.2.2",
     "jquery": "^3.1.1",
@@ -29,16 +29,16 @@
     "babel-preset-stage-0": "6.x",
     "css-loader": "~0.23.0",
     "es5-shim": "^4.5.8",
-    "extract-text-webpack-plugin": "",
-    "file-loader": "",
-    "less": "",
-    "less-loader": "",
+    "extract-text-webpack-plugin": "*",
+    "file-loader": "*",
+    "less": "*",
+    "less-loader": "*",
     "mockjs": "^1.0.1-beta3",
-    "open-browser-webpack-plugin": "",
-    "style-loader": "",
-    "url-loader": "",
-    "webpack": "",
-    "webpack-dev-server": ""
+    "open-browser-webpack-plugin": "*",
+    "style-loader": "*",
+    "url-loader": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
   },
   "keywords": [
     "es6",

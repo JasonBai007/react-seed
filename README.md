@@ -9,16 +9,18 @@
 - moment
 - Ajax
 - Mock
+- ReCharts
 - Babel
 - Webpack
-- ReCharts
+- Yarn
 
 ## How to use
 
 ```sh
-安装依赖 $ npm install
-启动服务 $ npm start
-生成文件 $ npm run build
+安装Yarn $ npm install -g yarn
+安装依赖 $ yarn
+启动服务 $ yarn start
+生成文件 $ yarn run build
 ```
 
 ## Tools
