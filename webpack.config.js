@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin'); //抽取CSS文件插件
-var OpenBrowserPlugin = require('open-browser-webpack-plugin'); //自动打开浏览器插件
+var ExtractTextPlugin = require('extract-text-webpack-plugin'); 
+var OpenBrowserPlugin = require('open-browser-webpack-plugin'); 
 
 module.exports = {
 
@@ -14,11 +14,9 @@ module.exports = {
         contentBase: "./app", 
         port: 8080
     },
-
-    // 配置入口
     entry: {
         pages: __dirname +'/app/src/router.jsx',
-        vendors:['react','react-dom','react-router','Recharts']  //第三方库和框架
+        vendors:['react','react-dom','react-router','Recharts']  //抽取公共框架
     },
     output: {
         publicPath: 'dist',
@@ -26,7 +24,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') }, //坑：不能用叹号链接，必须写成这种格式
+            { test: /\.css$/, loader: ExtractTextPlugin.extract('style','css') }, //坑：不能用叹号链接，必须写成这种格式
             { test: /\.less$/, loader: ExtractTextPlugin.extract('css!less') },
             { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel' },
             { test: /\.(png|jpg)$/, loader: 'url?limit=8192&name=img/[name].[ext]' },

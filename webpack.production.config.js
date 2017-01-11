@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         pages: __dirname +'/app/src/router.jsx',
-        vendors:['react','react-dom','react-router','Recharts']  //第三方库和框架
+        vendors:['react','react-dom','react-router','Recharts']  //抽取公共框架
     },
     output: {
         path: __dirname + '/app/dist',
