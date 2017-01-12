@@ -33,6 +33,7 @@ export default class Sidebar extends React.Component {
     }
     componentDidMount() {
         var now = window.location.pathname.substring(1);
+        now = now === '' ? 'home' : now;
         this.changeCookie(now);
         this.setState({ current: now });
     }
