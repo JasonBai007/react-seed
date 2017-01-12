@@ -9,12 +9,12 @@ export default class Title extends React.Component {
     render() {
         const titleStyle = {
             padding:'5px 20px',
-            background:'#ECECEC',
+            color:'#5C6B77',
+            background:'#ecf6fd',
             marginTop: 20,
             marginBottom: 10,
             letterSpacing:4,
             borderRadius:3,
-            boxShadow:'1px 1px 1px #999',
             overflow:'hidden',
         };        
         return (
