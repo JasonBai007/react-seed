@@ -13,7 +13,7 @@ export default class Setting extends React.Component {
         return (
             <div>
                 <Topbar />
-                <Title name="修改密码" />
+                <Title name="系统配置" />
             </div>
         )
     }       

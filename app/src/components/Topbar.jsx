@@ -7,7 +7,7 @@ const menu = (
       <a href="/user">用户中心</a>
     </Menu.Item>
     <Menu.Item>
-      <a href="/setting">修改密码</a>
+      <a href="/setting">系统配置</a>
     </Menu.Item>
     <Menu.Item>
       <a href="/login">退出登陆</a>

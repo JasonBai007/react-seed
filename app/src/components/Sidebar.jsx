@@ -21,8 +21,8 @@ export default class Sidebar extends React.Component {
         this.changeCookie(e.key);
         if(e.key == "home"){
             browserHistory.push('/');
-        }else if(e.key == 'chart'){
-            browserHistory.push('chart');
+        }else if(e.key == 'list'){
+            browserHistory.push('list');
         }else if(e.key == 'report'){
             browserHistory.push('report');
         }else if(e.key == 'user'){
@@ -50,11 +50,11 @@ export default class Sidebar extends React.Component {
                 >
                     <Menu.Item key="home"><Icon type="home" />首页</Menu.Item> 
                     <SubMenu key="sub1" title={<span><Icon type="bar-chart" /><span>导航一</span></span>}>
-                        <Menu.Item key="chart">子导航一</Menu.Item>
+                        <Menu.Item key="list">子导航一</Menu.Item>
                         <Menu.Item key="report">子导航二</Menu.Item>
                     </SubMenu>
                     <Menu.Item key="user"><Icon type="user" />用户中心</Menu.Item>
-                    <Menu.Item key="setting"><Icon type="setting" />设置</Menu.Item>                    
+                    <Menu.Item key="setting"><Icon type="setting" />系统配置</Menu.Item>                    
                 </Menu>
                 <div id="copyright">Copyright © Jason</div>                    
             </div>                

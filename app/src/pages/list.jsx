@@ -13,7 +13,7 @@ export default class Chart extends React.Component {
         return (
             <div>
                 <Topbar />
-                <Title name="图表" />                
+                <Title name="子导航一" />                
             </div>
         )
     }       

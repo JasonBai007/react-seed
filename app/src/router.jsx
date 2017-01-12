@@ -8,7 +8,7 @@ import Login from './pages/login';
 import Home from './pages/home';
 import User from './pages/user';
 import Setting from './pages/setting';
-import Chart from './pages/chart';
+import List from './pages/list';
 import Report from './pages/report';
 import NotFoundPage from './pages/nofind';
 
@@ -20,7 +20,7 @@ ReactDOM.render(
             <IndexRoute component={Home}/>
             <Route path="user" component={User}/>
             <Route path="setting" component={Setting}/>
-            <Route path="chart" component={Chart}/>
+            <Route path="list" component={List}/>
             <Route path="report" component={Report}/>
             {/* 404 */}
             <Route path='404' component={NotFoundPage} />                    
