@@ -1,5 +1,7 @@
 import React from 'react';
-import 'animate.css/animate.min.css'
+import 'animate.css/source/_base.css'
+import 'animate.css/source/bouncing_entrances/bounceInLeft.css'
+import 'animate.css/source/bouncing_entrances/bounceInRight.css'
 
 export default class Secret extends React.Component {
     constructor(props) {
