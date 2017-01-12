@@ -6,7 +6,6 @@ import {Card,Row,Col} from 'antd'
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts'
 
 import '../less/home.less'
-import '../less/chart.less'
 import {lineData} from '../data/data'
 
 let debug = 1;
