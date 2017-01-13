@@ -35,10 +35,3 @@
 > [ECharts](http://echarts.baidu.com/)  
 > [Recharts](http://recharts.org/)  
 > [ES6 BOOK](http://es6.ruanyifeng.com/)  
-
-## Screenshot
-![login](https://github.com/jasonBai007/react-seed/raw/master/screenshot/login.png)
-![home](https://github.com/jasonBai007/react-seed/raw/master/screenshot/home.png)
-![table](https://github.com/jasonBai007/react-seed/raw/master/screenshot/table.png)
-![last](https://github.com/jasonBai007/react-seed/raw/master/screenshot/last.png)
-![route](https://github.com/jasonBai007/react-seed/raw/master/screenshot/route.png)
