@@ -21,7 +21,7 @@ ReactDOM.render(
             <Route path="user" component={User}/>
             <Route path="setting" component={Setting}/>
             <Route path="list" component={List}/>
-            <Route path="report" component={Report}/>
+            <Route path="report" component={Report} />          
             {/* 404 */}
             <Route path='404' component={NotFoundPage} />                    
             {/* 其他重定向到 404 */}
