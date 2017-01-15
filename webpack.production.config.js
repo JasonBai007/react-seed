@@ -9,7 +9,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/app/dist',
-        publicPath:'dist/',  //事实上，这个配置直接影响了图片的输出路径
+        publicPath:'dist',  //事实上，这个配置直接影响了图片的输出路径
         filename: 'js/bundle.js'
     },
     module: {
@@ -17,7 +17,7 @@ module.exports = {
             { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') }, 
             { test: /\.less$/, loader: ExtractTextPlugin.extract('css!less') },
             { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel' },
-            { test: /\.(png|jpg)$/, loader: 'url?limit=8192&name=img/[name].[ext]' },
+            { test: /\.(png|jpg)$/, loader: 'url?limit=8192&name=/img/[name].[ext]' },
             { test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/, loader: 'url' }
         ]
     },
