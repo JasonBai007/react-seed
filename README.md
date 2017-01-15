@@ -50,4 +50,5 @@
 - 给组件定义方法不再用 名字: function()的写法，而是直接用名字()，在方法的最后也不能有逗号了
 - 在ES6下，你需要通过bind来绑定this引用，或者使用箭头函数（它会绑定当前scope的this引用）来调用
 - sources下，点开可以看到webpack:目录，里面可以直接看到我们开发态的源代码，方便调试
+- "build": "rimraf app/dist && webpack -p --env.config production" 先清除dist目录
 
