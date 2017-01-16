@@ -26,20 +26,6 @@ This repository is an universal React-ES6-Webpack boilerplate for developer to q
 启动服务 $ yarn start
 生成文件 $ yarn run build
 ```
-## Tools
-> [animate.css](https://daneden.github.io/animate.css)  
-> [wow.js](http://mynameismatthieu.com/WOW/index.html)  
-> [Font Awesome](http://fontawesome.io/)  
-> [JSON Editer](http://www.qqe2.com/)  
-> [Moment.js ](http://momentjs.com/)  
-> [Mock.js](http://mockjs.com/examples.html)  
-> [Mock.js](https://segmentfault.com/a/1190000003087224)  
-> [lodash.js](http://lodashjs.com/)  
-> [ECharts](http://echarts.baidu.com/)  
-> [Recharts](http://recharts.org/)  
-> [ES6 BOOK](http://es6.ruanyifeng.com/)  
-
-
 ## Note
 
 - JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
