@@ -4,7 +4,7 @@
   "description": "a seed for a project using react antd and webpack",
   "main": "app/src/main.jsx",
   "scripts": {
-    "build": "webpack  --progress --colors --config webpack.production.config.js",
+    "build": "rimraf app/dist && webpack  --progress --colors --config webpack.production.config.js",
     "start": "webpack-dev-server --progress --hot --colors"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "less-loader": "*",
     "mockjs": "^1.0.1-beta3",
     "open-browser-webpack-plugin": "*",
+    "rimraf": "^2.5.4",
     "style-loader": "*",
     "url-loader": "*",
     "webpack": "*",

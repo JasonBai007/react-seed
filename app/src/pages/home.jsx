@@ -11,10 +11,10 @@ import {lineData} from '../data/data'
 let debug = 1;
 if (debug) {
     Mock.mock(/getProfile/,{
-        "v1|1-7": "★",
-        "v2|1-7": "★",
-        "v3|1-7": "★",
-        "v4|1-7": "★"   
+        "idx|4":[{
+            "key|1":['紫外线指数','穿衣指数','感冒指数','洗车指数'],
+            "value|1-7":"★"
+        }]        
     })    
 }
 
@@ -22,10 +22,7 @@ export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            v1: '0%',
-            v2: '0%',
-            v3: '0%',
-            v4: '0%'
+            idx: []            
         }       
     }
 
@@ -36,12 +33,7 @@ export default class Home extends React.Component {
         .done(function(res) {
             let data = JSON.parse(res);
             // 需要绑定this
-            this.setState({
-                v1:data.v1,
-                v2:data.v2,
-                v3:data.v3,
-                v4:data.v4
-            })
+            this.setState({idx:data.idx})
         }.bind(this))
     }
     
@@ -52,20 +44,15 @@ export default class Home extends React.Component {
                 <Title name="首页" />
                 <Card title="今日生活指数">
                     <Row gutter={16}>
-                        <Col span="6">
-                          <Card>紫外线指数： <span className="stars">{this.state.v1}</span></Card>
-                        </Col>
-                        <Col span="6">
-                          <Card>穿衣指数： <span className="stars">{this.state.v2}</span></Card>
-                        </Col>
-                        <Col span="6">
-                          <Card>感冒指数： <span className="stars">{this.state.v3}</span></Card>
-                        </Col>
-                        <Col span="6">
-                          <Card>洗车指数： <span className="stars">{this.state.v4}</span></Card>
-                        </Col>
+                        {/*Each child in an array or iterator should have a unique "key" prop*/}
+                        {this.state.idx.map((item,index) => {
+                            return  <Col span="6" key={index}>
+                                      <Card>{item.key}： <span className="stars">{item.value}</span></Card>
+                                    </Col>
+                        })}                        
                     </Row>
                 </Card>
+                {/*以下是图表*/}
                 <div id="chartWrap">
                     <LineChart height={300} data={lineData.line} width={1171}
                         margin={{top: 5, right: 0, left: -30, bottom: 0}}>
