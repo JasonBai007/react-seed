@@ -1,4 +1,8 @@
-## Features
+## Introduction
+
+This repository is an universal React-ES6-Webpack boilerplate for developer to quickly build a super fast and powerful web app that can be rendered on the client using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file based on environment variables, one for development, one for production.
+
+## Technology Stack
 - React
 - React-Router
 - ES6
@@ -14,7 +18,7 @@
 - Webpack
 - Yarn
 
-## How to use
+## Getting Started
 
 ```sh
 安装Yarn $ npm install -g yarn
@@ -35,3 +39,8 @@
 > [ECharts](http://echarts.baidu.com/)  
 > [Recharts](http://recharts.org/)  
 > [ES6 BOOK](http://es6.ruanyifeng.com/)  
+
+
+## License
+
+[MIT](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
