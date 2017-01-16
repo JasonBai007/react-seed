@@ -4,7 +4,6 @@ import Sidebar from './components/Sidebar.jsx'
 
 // 引入垫片兼容IE
 require('es5-shim');
-require('es5-shim/es5-sham');
 require('console-polyfill');
 
 // Animate.CSS样式 & font-awesome样式
