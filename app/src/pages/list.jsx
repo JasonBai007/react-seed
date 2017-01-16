@@ -6,7 +6,7 @@ import { Table, Icon, Tooltip } from 'antd'
 
 import '../less/list.less'
 
-let debug = 0;
+let debug = 1;
 if (debug) {
     Mock.mock(/getTableData/,{
         "data|121-140": [{
@@ -29,7 +29,7 @@ export default class Chart extends React.Component {
 
     componentDidMount() {
         $.ajax({
-            url:'api/getTableData'
+            url:'getTableData'            
         })
         .done(function(res) {
             let data = JSON.parse(res);

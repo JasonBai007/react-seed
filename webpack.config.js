@@ -12,14 +12,15 @@ module.exports = {
         inline: true,
         progress: true,
         contentBase: "./app", 
-        port: 8080,
-        proxy: {
-           '/api/**': {
-             target: 'http://test.com',
-             secure: false,
-             changeOrigin: true
-           }
-        }
+        port: 8080
+        // 开发过程中可设置代理
+        // proxy: {
+        //    '/api/**': {
+        //      target: 'http://test.com',
+        //      secure: false,
+        //      changeOrigin: true
+        //    }
+        // }
     },
     devtool:"cheap-module-eval-source-map",  //在控制台的sources下，点开可以看到webpack://目录，里面可以直接看到我们开发态的源代码，这样方便我们直接在浏览器中打断点调试
     entry: {
