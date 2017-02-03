@@ -1,6 +1,13 @@
 import React from 'react';
 
-/*页面标题组件，可传参*/
+/**
+ @class Title
+ @extends React.Component
+ @constructor
+ @param name {String} 标题内容
+ @return {Component} 返回Title组件
+ */
+
 export default class Title extends React.Component {
     constructor(props) {
         super(props);       
