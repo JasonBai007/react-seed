@@ -1,7 +1,7 @@
 import React from 'react'
 import Topbar from '../components/Topbar'
 import Title from '../components/Title'
-import Secret from '../components/Secret'
+import Poem from '../components/Poem'
 
 export default class Setting extends React.Component {
     constructor(props) {
@@ -15,7 +15,7 @@ export default class Setting extends React.Component {
             <div>
                 <Topbar />
                 <Title name="系统配置" />
-                <Secret />
+                <Poem />
             </div>
         )
     }       
