@@ -3,7 +3,6 @@ import Mock from 'mockjs';
 import Topbar from '../components/Topbar'
 import Title from '../components/Title'
 import {Card,Row,Col} from 'antd'
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts'
 
 import '../less/home.less'
 import {lineData} from '../data/data'
@@ -52,19 +51,7 @@ export default class Home extends React.Component {
                         })}                        
                     </Row>
                 </Card>
-                {/*以下是图表*/}
-                <div id="chartWrap">
-                    <LineChart height={300} data={lineData.line} width={1171}
-                        margin={{top: 5, right: 0, left: -30, bottom: 0}}>
-                        <XAxis dataKey="name"/>
-                        <YAxis/>
-                        <CartesianGrid strokeDasharray="3 3"/>
-                        <Tooltip/>
-                        <Legend />
-                        <Line type="monotone" dataKey="maxTemp" stroke="#8884d8" activeDot={{r: 8}}/>
-                        <Line type="monotone" dataKey="minTemp" stroke="#82ca9d" />
-                    </LineChart>                    
-                </div>
+                
             </div>
         )
     }       

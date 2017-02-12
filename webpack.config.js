@@ -25,7 +25,7 @@ module.exports = {
     devtool:"cheap-module-eval-source-map",  //在控制台的sources下，点开可以看到webpack://目录，里面可以直接看到我们开发态的源代码，这样方便我们直接在浏览器中打断点调试
     entry: {
         pages: __dirname +'/app/src/router.jsx',
-        vendors:['react','react-dom','react-router','Recharts']  //抽取公共框架
+        vendors:['react','react-dom','react-router']  //抽取公共框架
     },
     output: {
         publicPath: 'dist',
