@@ -13,7 +13,7 @@ This repository is an universal React-ES6-Webpack boilerplate for developer to q
 - moment
 - Ajax
 - Mock
-- ReCharts
+- ECharts
 - Babel
 - Webpack
 - Yarn

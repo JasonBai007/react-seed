@@ -3,15 +3,10 @@ import Mock from 'mockjs';
 import Topbar from '../components/Topbar'
 import Title from '../components/Title'
 import {Card,Row,Col} from 'antd'
-import { PieReact } from '../components/charts/PieReact'
+import {lineData} from '../data/data.js';
+import { LineReact } from '../components/charts/LineReact'
 
 import '../less/home.less'
-
-const data = [
-    {value: 1, name: "是"},
-    {value: 2, name: "否"}
-]
-
 
 let debug = 1;
 if (debug) {
@@ -58,7 +53,7 @@ export default class Home extends React.Component {
                     </Row>
                 </Card>
 
-                <PieReact data={data} />
+                <LineReact data={lineData.line} />
                 
             </div>
         )
