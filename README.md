@@ -26,7 +26,7 @@ This repository is an universal React-ES6-Webpack boilerplate for developer to q
 启动服务 $ yarn start
 生成文件 $ yarn run build
 ```
-## Note
+## Notes
 
 - JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
 - 组件类的第一个字母必须大写
@@ -54,6 +54,13 @@ This repository is an universal React-ES6-Webpack boilerplate for developer to q
 - 在ES6下，你需要通过bind来绑定this引用，或者使用箭头函数（它会绑定当前scope的this引用）来调用
 - sources下，点开可以看到webpack:目录，里面可以直接看到我们开发态的源代码，方便调试
 - "build": "rimraf app/dist && webpack -p --env.config production" 先清除dist目录
+
+## Articles
+- [react架构经验分享](https://segmentfault.com/blog/hyyreact)
+- [React组件生命周期小结](http://www.jianshu.com/p/4784216b8194)
+- [react点击事件如何传传传参](https://segmentfault.com/q/1010000004185137)
+- [前端外刊评论 - react](https://zhuanlan.zhihu.com/FrontendMagazine?topic=React)
+
 
 ## License
 
