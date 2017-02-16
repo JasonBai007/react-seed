@@ -1,9 +1,9 @@
 import React from 'react'
 import Mock from 'mockjs';
 import Topbar from '../components/Topbar'
-import Title from '../components/Title'
-import {Card,Row,Col} from 'antd'
-import {lineData} from '../data/data.js';
+import { Title } from '../components/Title'
+import { Card,Row,Col } from 'antd'
+import { lineData } from '../data/data.js';
 import { LineReact } from '../components/charts/LineReact'
 
 import '../less/home.less'
@@ -41,20 +41,20 @@ export default class Home extends React.Component {
         return (
             <div>
                 <Topbar />
-                <Title name="首页" />
+                { Title("首页") }
                 <Card title="今日生活指数">
                     <Row gutter={16}>
                         {/*Each child in an array or iterator should have a unique "key" prop*/}
                         {this.state.idx.map((item,index) => {
-                            return  <Col span="6" key={index}>
-                                      <Card>{item.key}： <span className="stars">{item.value}</span></Card>
-                                    </Col>
+                            return  (
+                                <Col span="6" key={index}>
+                                    <Card>{item.key}： <span className="stars">{item.value}</span></Card>
+                                </Col>
+                            ) 
                         })}                        
                     </Row>
                 </Card>
-
-                <LineReact data={lineData.line} />
-                
+                <LineReact data={lineData.line} />                
             </div>
         )
     }       

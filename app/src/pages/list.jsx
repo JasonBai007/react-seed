@@ -1,7 +1,7 @@
 import React from 'react'
 import Mock from 'mockjs';
 import Topbar from '../components/Topbar'
-import Title from '../components/Title'
+import { Title } from '../components/Title'
 import { Table, Icon, Tooltip } from 'antd'
 
 import '../less/list.less'
@@ -107,13 +107,14 @@ export default class Chart extends React.Component {
         return (
             <div>
                 <Topbar />
-                <Title name="子导航一(表格)" />   
+                { Title("子导航一(表格)") }
                 <Table 
                     size="small"
                     rowSelection={rowSelection}
                     dataSource={this.state.tData} 
                     columns={columns}
-                    pagination={pagination} />
+                    pagination={pagination} 
+                />
             </div>
         )
     }       

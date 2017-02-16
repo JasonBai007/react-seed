@@ -9,9 +9,11 @@ const FormItem = Form.Item;
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.openNotificationWithIcon = this.openNotificationWithIcon.bind(this)
     }
 
-    handleSubmit = (e) => {
+    handleSubmit(e) {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
           if (!err) {
@@ -30,7 +32,7 @@ class LoginPage extends React.Component {
     }
 
     // 返回一个弹框对象，提示用户名和密码
-    openNotificationWithIcon = (type) => {
+    openNotificationWithIcon(type) {
         return notification[type]({
             message: '用户名&密码',
             description: '都是：ilovejasonbai',
