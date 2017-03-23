@@ -17,6 +17,7 @@ This repository is an universal React-ES6-Webpack boilerplate for developer to q
 - Babel
 - Webpack
 - Yarn
+- Redux:redux+react-redux+react-router-redux+redux-logger+redux-thunk+redux-saga(未使用)
 
 ## Getting Started
 
@@ -54,7 +55,7 @@ This repository is an universal React-ES6-Webpack boilerplate for developer to q
 - 在ES6下，你需要通过bind来绑定this引用，或者使用箭头函数（它会绑定当前scope的this引用）来调用
 - sources下，点开可以看到webpack:目录，里面可以直接看到我们开发态的源代码，方便调试
 - "build": "rimraf app/dist && webpack -p --env.config production" 先清除dist目录
-
+- 加入了Redux的技术栈：用redux写了home，list的数据，使用react-router-redux的监听地址方式大改了sidebar.js组件！
 ## Articles
 - [react架构经验分享](https://segmentfault.com/blog/hyyreact)
 - [React组件生命周期小结](http://www.jianshu.com/p/4784216b8194)

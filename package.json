@@ -18,7 +18,10 @@
     "moment": "^2.15.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-router": "^2.4.0"
+    "react-redux": "^5.0.3",
+    "react-router": "^2.4.0",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "6.x",
@@ -36,6 +39,11 @@
     "less-loader": "*",
     "mockjs": "^1.0.1-beta3",
     "open-browser-webpack-plugin": "*",
+    "redux-devtools-extension": "^2.13.0",
+    "redux-logger": "^2.10.2",
+    "redux-saga": "^0.14.3",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^2.5.4",
     "rimraf": "^2.5.4",
     "style-loader": "*",
     "url-loader": "*",
