@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        pages: __dirname +'/app/src/router.jsx',
+        pages: __dirname +'/app/src/app.js',
         vendors:['react','react-dom','react-router']  //抽取公共框架
     },
     output: {

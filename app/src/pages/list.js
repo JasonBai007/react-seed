@@ -1,47 +1,61 @@
 import React from 'react'
-import Mock from 'mockjs';
+// import Mock from 'mockjs';
 import Topbar from '../components/Topbar'
 import { Title } from '../components/Title'
 import { Table, Icon, Tooltip } from 'antd'
 
-import '../less/list.less'
 
-let debug = 1;
-if (debug) {
-    Mock.mock(/getTableData/,{
-        "data|121-140": [{
-            "key|+1":1,
-            "name":"@name",
-            "sex|1":["男","女"],
-            "age":"@integer(22, 60)",
-            "email":"@email"
-        }]
-    })    
-}
+import { connect } from "react-redux";
+import { createSelector } from "reselect";
+import { 
+    action_list_requestList,
+    action_list_destoryList
+} from '../reduxAction/actionList';
 
-export default class Chart extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            tData: []
-        }        
-    }
+import '../less/list.less';
 
+// let debug = 1;
+// if (debug) {
+//     Mock.mock(/getTableData/,{
+//         "data|121-140": [{
+//             "key|+1":1,
+//             "name":"@name",
+//             "sex|1":["男","女"],
+//             "age":"@integer(22, 60)",
+//             "email":"@email"
+//         }]
+//     })    
+// }
+
+class Chart extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         tData: []
+    //     }        
+    // }
     componentDidMount() {
-        $.ajax({
-            url:'getTableData'            
-        })
-        .done(function(res) {
-            let data = JSON.parse(res);
-            // 需要绑定this
-            this.setState({
-                tData:data.data
-            })
-        }.bind(this))
+        console.log('List 的 this.props:',this.props);
+        // 数据初始化
+        const {getListData} = this.props;
+        getListData();   
+        // $.ajax({
+        //     url:'getTableData'            
+        // })
+        // .done(function(res) {
+        //     let data = JSON.parse(res);
+        //     // 需要绑定this
+        //     this.setState({
+        //         tData:data.data
+        //     })
+        // }.bind(this))
     }
-
+    componentWillUnmount(){
+        const {destoryList} = this.props;
+        destoryList();
+    }
     render() {   
-
+        const { listData } = this.props;
         // 设置列
         const columns = [{
           title: '姓名',
@@ -95,7 +109,8 @@ export default class Chart extends React.Component {
         const pagination = {
           size:"default",
           showQuickJumper:true,
-          total: this.state.tData.length,
+          // total: this.state.tData.length,
+          total: listData.tData.length,
           showSizeChanger: true,
           onShowSizeChange: (current, pageSize) => {
             console.log('Current: ', current, '; PageSize: ', pageSize);
@@ -111,7 +126,8 @@ export default class Chart extends React.Component {
                 <Table 
                     size="small"
                     rowSelection={rowSelection}
-                    dataSource={this.state.tData} 
+                    /*dataSource={this.state.tData} */
+                    dataSource={listData.tData}
                     columns={columns}
                     pagination={pagination} 
                 />
@@ -119,3 +135,26 @@ export default class Chart extends React.Component {
         )
     }       
 }
+
+// 使用 reselect 库优化 redux 
+const reSelect = state => createSelector(
+    state => state,
+    state => {
+        return {
+            listData:state.reducerList
+        }
+    }
+)
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getListData:(...args) => dispatch(action_list_requestList(...args)),
+        destoryList:(...args) => dispatch(action_list_destoryList(...args))
+    }
+}
+
+export default connect(
+    // mapStatesToProps,
+    reSelect,
+    mapDispatchToProps
+)(Chart);

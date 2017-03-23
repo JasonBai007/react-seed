@@ -11,7 +11,7 @@ export default class User extends React.Component {
         return (
             <div>
                 <Topbar />
-                {Title("用户中心")}
+                {Title("用户中心")}      
             </div>
         )
     }       

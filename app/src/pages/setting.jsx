@@ -4,9 +4,9 @@ import { Title } from '../components/Title'
 import { Poem } from '../components/Poem'
 
 export default class Setting extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {        
         return (

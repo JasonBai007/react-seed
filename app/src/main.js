@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Sidebar from './components/Sidebar.jsx'
-
+import Sidebar from './components/Sidebar';
+import Layout from "././components/Topbar";
 // 引入垫片兼容IE
 require('es5-shim');
 require('console-polyfill');
