@@ -30,7 +30,7 @@
     "babel-preset-stage-0": "6.x",
     "css-loader": "~0.23.0",
     "es5-shim": "^4.5.8",
-    "extract-text-webpack-plugin": "*",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "*",
     "less": "*",
     "less-loader": "*",
@@ -39,7 +39,7 @@
     "rimraf": "^2.5.4",
     "style-loader": "*",
     "url-loader": "*",
-    "webpack": "*",
+    "webpack": "^2.4.1",
     "webpack-dev-server": "*"
   },
   "keywords": [
